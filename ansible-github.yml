@@ -17,3 +17,9 @@ tasks:
       owner=root
       group=root
       mode=0644
+      
+  - name: clone a private repository
+    git: >
+      repo=ssh://git@github.com/someone/example-repo.git
+      key_file=/root/.ssh/id_rsa.github
+      dest=/opt/example
